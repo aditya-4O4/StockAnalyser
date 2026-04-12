@@ -156,6 +156,9 @@ def portfolio_manager():
         except ValueError:
             print("  ❌ Invalid number entered.\n")
             return
+        if qty <= 0 or buy_price <= 0:
+            print("  ❌ Quantity and price must be positive numbers.\n")
+            return
         portfolio[ticker] = {"qty": qty, "buy_price": buy_price}
         save_portfolio(portfolio)
         print(f"  ✅ {ticker} added to portfolio.\n")
