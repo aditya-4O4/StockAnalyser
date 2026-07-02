@@ -102,11 +102,11 @@ def stock_deep_dive():
 
     if pe != "N/A":
         if pe < 15:
-            signal = "🟢 Possibly UNDERVALUED — low P/E"
+            signal = "Possibly UNDERVALUED — low P/E"
         elif pe < 30:
-            signal = "🟡 FAIRLY VALUED — moderate P/E"
+            signal = "FAIRLY VALUED — moderate P/E"
         else:
-            signal = "🔴 Possibly OVERVALUED — high P/E"
+            signal = "Possibly OVERVALUED — high P/E"
         print(f"  Valuation     : {signal}")
 
     print()
@@ -174,7 +174,7 @@ def portfolio_manager():
 
     elif choice == "V":
         if not portfolio:
-            print("  📭 Portfolio is empty. Add some stocks first!\n")
+            print("Portfolio is empty. Add some stocks first!\n")
             return
 
         total_invested = 0
@@ -381,7 +381,7 @@ def export_portfolio_csv():
     portfolio = load_portfolio()
 
     if not portfolio:
-        print("  📭 Portfolio is empty. Nothing to export.\n")
+        print("Portfolio is empty. Nothing to export.\n")
         return
 
     date_str = datetime.datetime.now().strftime("%Y%m%d_%H%M")
